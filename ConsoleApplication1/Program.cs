@@ -2,12 +2,245 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Demo;
+
+
+
+#region IsOperator
+
+//class GreatGrandParent
+//{
+//    public void Hunt() { }
+//}
+//class GrandParent : GreatGrandParent
+//{
+//    public GrandParent() : base()
+//    {
+
+//    }
+//    public void Chacha() { }
+//}
+//class Parent : GrandParent
+//{
+//    public Parent() : base()
+//    {
+
+//    }
+//    public void Sing() { }
+//}
+//class Child : Parent
+//{
+//    public Child() : base()
+//    {
+
+//    }
+//    public void Play() { }
+//}
+//class MyClass
+//{
+//    static void Main(string[] args)
+//    {
+//        //c,p,gp,ggp
+//        Child child = new Child();
+//        GrandParent gp = null;
+
+//        if(child is GrandParent)
+//        {
+//            gp = (GrandParent)child;
+//        }
+
+//        if(gp != null)
+//        {
+//            gp.Chacha();
+//            gp.Hunt();
+//        }
+//    }
+//}
+#endregion
+
+#region Object Explicit
+//class GreatGrandParent
+//{
+//    public void Hunt() { }
+//}
+//class GrandParent : GreatGrandParent
+//{ 
+//    public GrandParent():base()
+//{
+
+//}
+//    public void Chacha() { }
+//}
+//class Parent : GrandParent
+//{
+//    public Parent():base()
+//    {
+
+//    }
+//    public void Sing() { }
+//}
+//class Child : Parent
+//{
+//    public Child():base()
+//    {
+
+//    }
+//    public void Play() { }
+//}
+//class MyClass
+//{
+//    static void Main(string[] args)
+//    {
+//        //c,p,gp,ggp
+//        Child child = new Child();
+//        //p,gp,ggp
+//        Parent parent = new Parent();
+//        //gp,ggp
+//        GrandParent grandParent = new GrandParent();
+//        //ggp
+//        GreatGrandParent greatGrandParent = new GreatGrandParent();
+
+//        greatGrandParent = child;
+//        greatGrandParent = parent;
+//        greatGrandParent = grandParent;
+
+//        grandParent = child;
+//        grandParent = parent;
+
+//        parent = child;
+
+//        //Dog dogB = (Dog)animalB; //explicit conversion - build success - runtime error
+//        //dog.Sleep();
+//        //dog.Bark();
+//        //dog.Eat();
+//    }
+//}
+#endregion
+
+#region Explicit Conversion
+//class MyClass
+//{
+//    static void Main(string[] args)
+//    {
+//        long x = 100;
+//        int y = (int)x; //explicit
+//    }
+//}
+#endregion
+
+#region Implicit Conversion
+//class MyClass
+//{
+//    static void Main(string[] args)
+//    {
+//        int x = 100;
+//        long y = x; //implicit
+//    }
+//}
+#endregion
+
+#region Partial
+//partial class Dog
+//{
+//    public int Age { get; set; }
+//    public string Breed { get; set; }
+//    public string Color { get; set; }
+//    partial void Play();
+//}
+// abstract partial class Dog
+//{
+//    public  void Bark() { }
+//    partial void Play() { }
+//    public void Run() { }
+//    public void CallPlay()
+//    {
+//        Play();
+//    }
+//}
+//sealed partial class Puppy : Dog
+//{
+
+//}
+//class MyClass
+//{
+//    static void Main(string[] args)
+//    {
+//        Dog dog = new Dog();
+//        dog.CallPlay();
+//        Puppy p = new Puppy();
+//    }
+//}
+#endregion
+
+#region Sealed
+//class Animal
+//{
+//    public virtual void Sleep() { }
+//    public virtual void Eat() { }
+//}
+//class Dog : Animal 
+//{
+//    public  override void Sleep() { }
+//    public  override void Eat() { }
+//}
+//class Puppy : Dog
+//{
+//     public sealed override void Sleep() { }
+//     public sealed override void Eat() { }
+//}
+//class Shihtzu : Puppy
+//{
+//    new public virtual void Sleep() { }
+//    new public void Eat() { }
+//}
+//class QT : Shihtzu
+//{
+//}
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Animal animal = new Animal();
+//        animal.Sleep();
+//        animal.Eat();
+
+//        Dog dog = new Dog();
+//        dog.Sleep();
+//        dog.Eat();
+
+//        Puppy puppy = new Puppy();
+//        puppy.Sleep();
+//        puppy.Eat();
+
+//        Shihtzu shitz = new Shihtzu();
+//        shitz.Sleep();
+
+//        QT da = new QT();
+//        da.Sleep();
+//    }
+//}
+
+#endregion
 
 #region Abstract
-abstract class AbstractClass
-{
-    public int string = ";l";
-}
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        //AbstractClass abstractObject = new AbstractClass();
+//        Dog dog = new Dog();
+
+//        dog.SampleProperty = 100;
+//        dog.SampleMethod();
+//        dog.Sleep();
+//        //dog.Age = 1; //no protected private
+
+//        SealedClass sc = new SealedClass();
+//        sc.SealedMethod();
+//        sc.Eat();
+//        sc.SampleProperty = 1;
+//    }
+//}
 #endregion
 
 #region Interface
