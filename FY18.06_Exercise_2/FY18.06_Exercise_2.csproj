@@ -35,6 +35,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exercise3_Isosceles_right_side_up_reverse.cs" />
+    <Compile Include="Exercise3_Isosceles_right_side_up.cs" />
+    <Compile Include="Exercise3_Isosceles_right.cs" />
+    <Compile Include="Exercise3_Isosceles_left.cs" />
     <Compile Include="Exercise2_Trapezoid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
